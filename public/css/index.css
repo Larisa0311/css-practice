@@ -1,7 +1,68 @@
-html {
-  max-width: 720px;
+.card {
+  color: red;
 }
 
-body {
-  background: #fff;
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+}
+
+p:focus,
+p:hover,
+p:active {
+  -webkit-text-fill-color: rgb(212, 255, 0);
+  -webkit-text-stroke: 1px rgb(255, 0, 230);
+  direction: rtl;
+}
+
+#test {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+  text-align: justify;
+  letter-spacing: 0.05em;
+}
+
+span {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline dotted red;
+}
+
+pre {
+  tab-size: 10;
+  letter-spacing: 100%;
+}
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+span {
+  font-size: larger;
+  font-weight: 900;
+}
+
+.test {
+  font-weight: lighter;
+  font-style: oblique;
+}
+
+.test {
+  display: none;
+}
+
+.block {
+  display: block;
+  background: rgb(233, 221, 221);
+  margin: auto;
+  min-width: min-content;
+  max-width: 600px;
+  max-height: max-content;
+  min-height: min-content;
 }
