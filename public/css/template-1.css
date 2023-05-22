@@ -1,3 +1,8 @@
+:root {
+  --text-color: #212529;
+  --space-medium: 24px;
+}
+
 .page {
   background: #ffffff;
   padding: 0.15px;
@@ -9,7 +14,7 @@
 }
 
 .header {
-  padding: 24px;
+  padding: var(--space-medium);
   border-bottom: 1px solid #dee2e6;
 }
 
@@ -36,7 +41,8 @@
 
 .nav-link:hover {
   text-decoration: underline;
-  color: blue;
+
+  opacity: 0.5;
 }
 
 .nav-vertical {
@@ -44,7 +50,7 @@
 }
 
 .nav-inlain > .nav-link:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .nav-vertical > .nav-link:not(:last-child) {
@@ -61,7 +67,7 @@
 }
 
 .footer {
-  padding: 24px 0;
+  padding: var(--space-medium) 0;
   border-top: 1px solid #dee2e6;
 }
 
@@ -74,21 +80,21 @@
 
 .footer-title {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color, #212529);
   display: block;
   margin-bottom: 12px;
 }
 
 .hero-title {
   font-size: 56px;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
 }
 
 .hero-text {
-  color: #212529;
+  color: var(--text-color, #212529);
   font-size: 20px;
   text-align: center;
   max-width: 585px;
@@ -97,18 +103,18 @@
 }
 
 .plans-card:not(:last-of-type) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .card-header {
   padding: 12px;
   text-align: center;
-  font-size: 24px;
-  color: #212529;
+  font-size: var(--space-medium);
+  color: var(--text-color, #212529);
 }
 
 .card-body {
-  padding: 24px;
+  padding: var(--space-medium);
 }
 
 .card-block {
@@ -116,12 +122,12 @@
 }
 
 .card-block:not(:last-of-type) {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-medium);
 }
 
 .card-price-amount {
   font-size: 40px;
-  color: #212529;
+  color: var(--text-color, #212529);
 }
 
 .card-price-duration {
@@ -132,7 +138,7 @@
 
 .card-description-item {
   font-size: 16px;
-  color: #212529;
+  color: var(--text-color, #212529);
   display: block;
 }
 
@@ -157,6 +163,7 @@
   outline-offset: 5px;
   cursor: not-allowed;
   box-shadow: 5px 5px 10px 1px rgba(116, 160, 255, 0.254);
+  opacity: 0.5;
 }
 
 .btn {
@@ -165,6 +172,8 @@
 
 .btn:hover {
   box-shadow: 5px 5px 10px 1px rgba(116, 160, 255, 0.254);
+
+  opacity: 0.3;
 }
 
 h1 {
@@ -177,11 +186,11 @@ h1 {
 
 .hero-text {
   background: grey;
-  max-width: 200px;
-  width: 200px;
+  max-width: 400px;
+  width: 600px;
   hyphens: manual;
   overflow: auto;
-  resize: horizontal;
+  resize: none;
   word-spacing: 3px;
 }
 
@@ -192,4 +201,79 @@ h1 {
   height: 65px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* .page {
+  background-image: url('/img/test2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+} */
+
+.hero-text {
+  padding: 40px;
+  color: #00ff48;
+
+  border-image-source: url('/img/test2.jpg');
+  border-image-width: 10% 10%;
+  border-image-slice: 10% 10%;
+
+  border-image-outset: 30px;
+}
+
+.card-block {
+  /* list-style-type: upper-alpha; */
+  padding: 0;
+  list-style-position: inside;
+  list-style-image: linear-gradient(
+    to bottom right,
+    blue,
+    red
+  );
+}
+
+.card-description-item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid #343a40;
+} */
+
+.table tr td {
+  border: 1px solid #4f6983;
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+  border-collapse: unset;
+  border-spacing: 10px 20px;
+  caption-side: top;
+  empty-cells: hide;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: ' ';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('/img/test2.jpg');
+}
+
+.nav-link::before {
+  margin-right: 15px;
+}
+
+.nav-link::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+  margin-left: calc(50% - (600px / 2));
 }
