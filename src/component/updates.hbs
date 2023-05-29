@@ -1,0 +1,15 @@
+{{#with data}}
+<div>
+	<h1 class="updates_title">{{title}}</h1>
+
+	{{#each list}}
+	<div class="updates_list">
+		<img class="updates_img" name="32x32">
+		<strong class="updates_name">{{nickname}}</strong>
+		<p class="updates_text">{{description}}</p>
+	</div>
+	{{/each}}
+
+	<a href="show_all.url" class="updates_link">{{show_all.text}}</a>
+</div>
+{{/with}}
