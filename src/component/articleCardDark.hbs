@@ -1,0 +1,10 @@
+<div class="articles_list">
+	{{#each data}}
+	<div>
+		<img src="{{photo}}" alt="{{name}}" class="articles_img">
+		<h3 class="articles_title">{{name}}</h3>
+		<p class="articles_text">{{description}}</p>
+		<a href="#{{id}}" class="articles_button">Read All</a>
+	</div>
+	{{/each}}
+</div>
