@@ -1,0 +1,71 @@
+<header class="header">
+    {{#with header}}
+    <div class="header_link">
+
+        {{>logo logo=brandName}}
+
+        <nav class="header_nav">
+            <div class="header_nav_right">
+                {{>nav list=links}}
+            </div>
+        </nav>
+    </div>
+
+    <div class="ad">
+        <div>Users Online: {{userOnline}}</div>
+        <div>
+            <span class="ad_logo">Ad </span>
+            <span class="ad_text">{{ad.text}}: {{ad.url}}</span>
+        </div>
+    </div>
+    {{/with}}
+</header>
+
+
+
+<div class="hero">
+    <h2 class="hero_title">
+        {{hero.title}}
+    </h2>
+    <p class="hero_text">{{hero.description}}</p>
+    <a class="hero_button" href="{{hero.button.url}}">{{hero.button.text}}</a>
+</div>
+
+
+<div class="about">
+    <h2 class="about_title">{{about.heading}}</h2>
+    <p class="about_text">{{about.info}}</p>
+</div>
+
+<main class="articles">
+
+    <div class="articles_header">
+        <h1>Our Articles</h1>
+        <a href="#">View All</a>
+    </div>
+
+    <div class="articles_list">
+        {{#each articles}}
+        <div>
+            <img src="{{photo}}" alt="{{name}}" class="articles_img">
+            <h3 class="articles_title">{{name}}</h3>
+            <p class="articles_text">{{description}}</p>
+            <a href="#{{id}}" class="articles_button">Read All</a>
+
+            {{/each}}
+        </div>
+
+</main>
+
+<footer class="footer">
+    {{#with footer}}
+    <div>
+        <span class="footer_copyright">{{copyright}}</span>
+    </div>
+    <div class="nav nav_inlain">
+        {{#each pages}}
+        <a href="{{path}}" class="nav_link">{{name}}</a>
+        {{/each}}
+    </div>
+    {{/with}}
+</footer>
