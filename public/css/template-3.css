@@ -1,3 +1,5 @@
+@layer normalize, main, component, style;
+
 @import '/css/var.css';
 
 @font-face {
@@ -205,25 +207,29 @@
   font-weight: var(--width-text);
 }
 
-.button {
-  display: inline-block;
-  font-size: var(--size-d);
-  text-decoration: none;
-  border-radius: var(--space-m);
-  padding: var(--space-m) var(--space-xm);
-  transition-property: opacity, background-color, color;
-  transition-duration: 1s;
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-d);
+    text-decoration: none;
+    border-radius: var(--space-m);
+    padding: var(--space-m) var(--space-xm);
+    transition-property: opacity, background-color, color;
+    transition-duration: 1s;
+  }
+
+  .button:hover {
+    opacity: 0.7;
+    background-color: yellow;
+    color: red;
+  }
 }
 
-.card-button {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-}
-
-.button:hover {
-  opacity: 0.7;
-  background-color: yellow;
-  color: red;
+@layer component {
+  .card-button {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
 }
 
 .form {
@@ -435,4 +441,10 @@ body:hover .modal {
 
 .hero-title {
   font-size: 5cqw;
+}
+
+@layer style {
+  .card-button {
+    background: red;
+  }
 }
