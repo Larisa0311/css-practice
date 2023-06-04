@@ -1,6 +1,6 @@
 <div class="header">
     <a href="#test">
-        {{>logo}}
+        {{>logo logo='L'}}
     </a>
     <nav class="header-nav">
         <div class="header-nav-right">
@@ -11,26 +11,28 @@
 
 
 {{#with hero}}
-<div class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title"> {{title}} </h1>
-        <p class="hero-text"> {{text}} </p>
-    </div>
-    <div class="hero-slider">
-        <div class="hero-slider-icon hero-slider-left">{{left}}</div>
-        <img src="{{photo}}" alt="hero-image" class="hero-image">
-        <div class="hero-slider-icon hero-slider-rigth">{{rigth}}</div>
+<div class="hero-container">
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title"> {{title}} </h1>
+            <p class="hero-text"> {{text}} </p>
+        </div>
+        <div class="hero-slider">
+            <div class="hero-slider-icon hero-slider-left">{{left}}</div>
+            <img src="{{photo}}" alt="hero-image" class="hero-image">
+            <div class="hero-slider-icon hero-slider-rigth">{{rigth}}</div>
+        </div>
     </div>
 </div>
 {{/with}}
 
-<input type="text" class="input">
+{{!-- <input type="text" class="input"> --}}
 
-<div class="modal">
+{{!-- <div class="modal">
     {{hero.text}} {{hero.text}}
-    {{!-- <img src="{{hero.photo}}" alt="hero-image" class="modal-image"> --}}
+    <img src="{{hero.photo}}" alt="hero-image" class="modal-image">
     <div class="modal-text">{{hero.text}} {{hero.text}}</div>
-</div>
+</div> --}}
 
 <main class="blog">
     {{#each blog}}
@@ -42,7 +44,7 @@
 <div class="form">
     <div class="form-content">
         <h3 class="form-title">{{title}}</h3>
-        <p class="form-info">{{info}}</p>
+        <p class="form-info">{{info}}<span class="ex">x</span> </p>
     </div>
     <div class="form-action">
         <a class="button form-button" href="{{href}}">{{button}}</a>
@@ -52,7 +54,7 @@
 
 <div class="footer" id="test">
     <div>
-        {{>logo}}
+        {{>logo logo="L"}}
         <span class="footer-copyright">Copyright 2023-2024</span>
     </div>
 
@@ -63,3 +65,5 @@
     </div>
     {{/each}}
 </div>
+
+<div class="test">Test</div>

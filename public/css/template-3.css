@@ -1,3 +1,17 @@
+@import '/css/var.css';
+
+@font-face {
+  font-family: Segment;
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Segment;
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+
 @keyframes fly {
   from {
     top: 0;
@@ -21,28 +35,6 @@
     left: 0;
     background: purple;
   }
-}
-
-:root {
-  --color-title: #212529;
-  --color-border: #dee2e6;
-  --color-white: #ffffff;
-  --color-text: #343a40;
-  --color-primary: rgb(46, 46, 255);
-
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --width-title: 500;
-  --width-text: 400;
-
-  --page-wigth: 960px;
 }
 
 /*=========================*/
@@ -98,16 +90,16 @@
   display: flex;
 }
 
-.nav-inlain {
+.nav_inlain {
   gap: var(--space-l);
 }
 
-.nav-vertical {
+.nav_vertical {
   gap: var(--space-xm);
   flex-direction: column;
 }
 
-.nav-link {
+.nav_link {
   color: var(--color-text);
   font-size: var(--size-d);
   text-decoration: none;
@@ -117,7 +109,7 @@
   transition-duration: 1s;
 }
 
-.nav-link:hover {
+.nav_link:hover {
   text-decoration: underline;
   color: var(--color-primary);
 }
@@ -371,4 +363,76 @@ body:hover .modal {
 
 :root {
   scroll-behavior: smooth;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (600px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form {
+  gap: var(--space-l);
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.form_info {
+  max-width: 300px;
+  width: 100%;
+  line-height: 150%;
+}
+
+.form-content {
+  align-items: center;
+  text-align: center;
+}
+
+.hero-container {
+  container-type: inline-size;
+  container-name: hero;
+}
+
+@container hero (width < 960px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+.ex {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 2ex;
+}
+
+/* .test {
+  position: absolute;
+  background: red;
+  top: 0;
+  left: 0;
+
+  height: 100vmin;
+  width: 100vmin;
+  z-index: 9999;
+} */
+
+.hero-title {
+  font-size: 5cqw;
 }
